@@ -71,7 +71,19 @@ class LinkedList:
 
     
     def search(self, data): #Search the given element in the linked list
-        pass
+        if not self.head:
+            print("Linked list is empty, nothing to find!")
+
+        current = self.head
+        position = 0
+        while current:
+            if current.data == data:
+                print(f"{data} found at position {position}")
+                return
+            current = current.next
+            position += 1
+        print(f"{data} not found in the linked list!")
+
     
     def display(self): #Display the entire linked list
         current = self.head
@@ -94,4 +106,8 @@ ll.append(60)
 ll.display()
 ll.delete_starting()
 ll.delete_ending()
+ll.search(10)
+ll.search(30)
+ll.search(60)
+ll.search(40)
 ll.display()
