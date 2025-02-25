@@ -21,7 +21,7 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            return f"Stack is already empty! Nothing to pop!"
+            print(f"Stack is already empty! Nothing to pop!")
         else:
             popped_item = self.top
             self.top = self.top.next
@@ -38,9 +38,9 @@ my_stack.push(10)
 my_stack.push(20)
 my_stack.push(30)
 print("Is the stack empty?", my_stack.is_empty())
-my_stack.peek()
+print(my_stack.peek())
 my_stack.pop()
 my_stack.pop()
 my_stack.pop()
-my_stack.peek()
+print(my_stack.peek())
 my_stack.pop()
